@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="cart">
+    <h3>Shopping Cart</h3>
+    <ul>
+        {% for item in cart %}
+            <li>{{item.name}}
+- {{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total: {{ total }} </p>
+    <button
+onclick="checkout()">Checkout</button>
+</div>
+{% endblock %}
